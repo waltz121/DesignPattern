@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatternMain", "Design
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Decorator", "Decorator\Decorator.csproj", "{55B172FD-800C-4CC9-A6CA-787C46A4A873}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Strategy", "Strategy\Strategy.csproj", "{FCA7502C-2260-4767-977C-95001D151674}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{55B172FD-800C-4CC9-A6CA-787C46A4A873}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{55B172FD-800C-4CC9-A6CA-787C46A4A873}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{55B172FD-800C-4CC9-A6CA-787C46A4A873}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCA7502C-2260-4767-977C-95001D151674}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCA7502C-2260-4767-977C-95001D151674}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCA7502C-2260-4767-977C-95001D151674}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCA7502C-2260-4767-977C-95001D151674}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
