@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Facade.TemperatureFacade.LocalTemperature">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAQAAIAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>TemperatureFacade\LocalTemperature.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Facade.TemperatureFacade.TemperatureLookupFacade">
+    <Position X="2.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AARAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAACAA=</HashCode>
+      <FileName>TemperatureFacade\TemperatureLookupFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Facade.WeatherServices.EnglishMetricConverter">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WeatherServices\EnglishMetricConverter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Facade.WeatherServices.GeoLookupService">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <NestedTypes>
+      <Class Name="Facade.WeatherServices.GeoLookupService.Coordinates" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>WeatherServices\GeoLookupService.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAABAAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>WeatherServices\GeoLookupService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Facade.WeatherServices.LocalWeatherService">
+    <Position X="0.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WeatherServices\LocalWeatherService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Facade.WeatherServices.WeatherService" Collapsed="true">
+    <Position X="5.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WeatherServices\WeatherService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

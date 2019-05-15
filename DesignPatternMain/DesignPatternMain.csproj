@@ -54,6 +54,10 @@
       <Project>{55b172fd-800c-4cc9-a6ca-787c46a4a873}</Project>
       <Name>Decorator</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Facade\Facade.csproj">
+      <Project>{5dc4bd4b-f55e-4c50-b474-ea014bf31320}</Project>
+      <Name>Facade</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Strategy\Strategy.csproj">
       <Project>{fca7502c-2260-4767-977c-95001d151674}</Project>
       <Name>Strategy</Name>

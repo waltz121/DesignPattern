@@ -1,6 +1,7 @@
 ﻿using Decorator.Component;
 using Decorator.ConcreteComponents;
 using Decorator.ConcreteDecorators;
+using Facade.TemperatureFacade;
 using Strategy;
 using Strategy.Model;
 using Strategy.Strategy;
@@ -17,7 +18,8 @@ namespace DesignPatternMain
         static void Main(string[] args)
         {
             //executeDecorator();
-            executeStrategy();
+            executeFacade();
+            //executeStrategy();
         }
 
         static void executeDecorator()
@@ -51,6 +53,22 @@ namespace DesignPatternMain
             Console.WriteLine("Origin: " + order.Origin);
 
             Console.WriteLine("Cost: " + cost);
+            Console.ReadKey();
+        }
+
+        static void executeFacade()
+        {
+            const string zipCode = "83714";
+
+            var temperatureFacade = new TemperatureLookupFacade();
+            LocalTemperature localTemp = temperatureFacade.GetTemperature(zipCode);
+
+            Console.WriteLine("The current temperature is {0}F/{1}C. in {2}, {3}",
+                                localTemp.Farenheit.ToString("F1"),
+                                localTemp.Celcius.ToString("F1"),
+                                localTemp.City,
+                                localTemp.State);
+
             Console.ReadKey();
         }
     }
