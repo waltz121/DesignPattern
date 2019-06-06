@@ -4,17 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1B1D00CE-A77E-4495-B54F-3F3C1FC56480}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>DesignPatternMain</RootNamespace>
-    <AssemblyName>DesignPatternMain</AssemblyName>
+    <ProjectGuid>{2FE38423-98B4-47D0-9EEF-C31752F5AFF7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AbstractFactory</RootNamespace>
+    <AssemblyName>AbstractFactory</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,33 +41,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Autos\BMW\BMW328i.cs" />
+    <Compile Include="Autos\BMW\BMW740i.cs" />
+    <Compile Include="Autos\BMW\BMWBase.cs" />
+    <Compile Include="Autos\BMW\BMWM3.cs" />
+    <Compile Include="Autos\IAutomobile.cs" />
+    <Compile Include="Autos\Mini\MiniCooper.cs" />
+    <Compile Include="Autos\NullAutomobile.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="Factory\BMWFactory.cs" />
+    <Compile Include="Factory\IAutoFactory.cs" />
+    <Compile Include="Factory\MiniCooperFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\AbstractFactory\AbstractFactory.csproj">
-      <Project>{2fe38423-98b4-47d0-9eef-c31752f5aff7}</Project>
-      <Name>AbstractFactory</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Decorator\Decorator.csproj">
-      <Project>{55b172fd-800c-4cc9-a6ca-787c46a4a873}</Project>
-      <Name>Decorator</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Facade\Facade.csproj">
-      <Project>{5dc4bd4b-f55e-4c50-b474-ea014bf31320}</Project>
-      <Name>Facade</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Factory\Factory.csproj">
-      <Project>{7d16cfa6-9fc6-47ec-bd3c-3598ce09df49}</Project>
-      <Name>Factory</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Strategy\Strategy.csproj">
-      <Project>{fca7502c-2260-4767-977c-95001d151674}</Project>
-      <Name>Strategy</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

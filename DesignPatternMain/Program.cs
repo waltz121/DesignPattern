@@ -2,12 +2,15 @@
 using Decorator.ConcreteComponents;
 using Decorator.ConcreteDecorators;
 using Facade.TemperatureFacade;
+using Factory.SimpleFactory.Autos;
+using Factory.SimpleFactory.Factories;
 using Strategy;
 using Strategy.Model;
 using Strategy.Strategy;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -15,11 +18,14 @@ namespace DesignPatternMain
 {
     class Program
     {
+        
         static void Main(string[] args)
         {
             //executeDecorator();
-            executeFacade();
+            //executeFacade();
             //executeStrategy();
+            //executeSimpleFactory();
+            executeAbstractFactory();
         }
 
         static void executeDecorator()
@@ -71,5 +77,41 @@ namespace DesignPatternMain
 
             Console.ReadKey();
         }
+
+        static void executeSimpleFactory()
+        {
+            IAutoFactory autoFactory = new BMWFactory();
+
+            IAuto car = autoFactory.CreateAutomobile();
+
+            car.TurnOn();
+            car.TurnOff();
+            Console.ReadKey();
+        }
+
+        static void executeAbstractFactory()
+        {
+            AbstractFactory.Factory.IAutoFactory factory = new AbstractFactory.Factory.BMWFactory();
+
+            Console.WriteLine();
+            Console.WriteLine("++++++++++++++++ {0} ++++++++++++++++++", "SPORTS CAR");
+
+            var car = factory.CreateSportsCar();
+            car.TurnOn();
+            car.TurnOff();
+
+            Console.WriteLine();
+            Console.WriteLine("++++++++++++++++ {0} ++++++++++++++++++", "LUXURY CAR");
+            car.TurnOn();
+            car.TurnOff();
+
+            Console.WriteLine();
+            Console.WriteLine("++++++++++++++++ {0} ++++++++++++++++++", "ECONOMY CAR");
+            car.TurnOn();
+            car.TurnOff();
+
+            Console.ReadKey();
+        }
+
     }
 }
