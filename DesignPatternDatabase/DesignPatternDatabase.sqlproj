@@ -71,4 +71,7 @@
   <ItemGroup>
     <None Include="PublishLocations\LocalDesignPatternDatabase.publish.publish.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="DesignPatternDatabase.refactorlog" />
+  </ItemGroup>
 </Project>
