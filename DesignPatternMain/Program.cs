@@ -15,6 +15,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using UnitOfWork;
 
 namespace DesignPatternMain
 {
@@ -28,7 +29,8 @@ namespace DesignPatternMain
             //executeStrategy();
             //executeSimpleFactory();
             //executeAbstractFactory();
-            executeRepository();
+            //executeRepository();
+            executeUnitOfWork();
         }
 
         static void executeDecorator()
@@ -129,6 +131,53 @@ namespace DesignPatternMain
                 Console.ReadKey();
             }
                 
+        }
+
+        static void executeUnitOfWork()
+        {
+            using (DesignPatternDBEntities entities = new DesignPatternDBEntities())
+            {
+                UnitOfWork.UnitOfWork UoW = new UnitOfWork.UnitOfWork(entities);
+
+                Customer customer = new Customer();
+                Address address = new Address();
+                Random rnd = new Random();
+                int rngNum = rnd.Next(1, 500);
+
+                customer.FirstName = "FirstName " + rngNum;
+                customer.MiddleName = "MiddleName " + rngNum;
+                customer.LastName = "LastName " + rngNum;
+
+                rngNum = rnd.Next(1, 500);
+                address.City = "City Number " + rngNum ;
+                address.StreetAddress = rngNum + " Street";
+
+                rngNum = rnd.Next(1000, 9999);
+                address.ZipCode = rngNum.ToString();
+                address.State = "QW " + rngNum;
+                address.CustomerId = customer.CustomerId;
+
+                UoW.CustomerRepo.Add(customer);
+
+                UoW.AddressRepo.Add(address);
+
+                UoW.Commit();
+
+                var displayCustomer = UoW.CustomerRepo.FindById(customer.CustomerId);
+                var displayAddress = UoW.AddressRepo.FindById(address.Id);
+
+                Console.WriteLine("Newly Created Customer: " + "ID: " + displayCustomer.CustomerId + ", Name: " + displayCustomer.FirstName 
+                                + " " + displayCustomer.MiddleName + ", " + displayCustomer.LastName);
+
+                Console.WriteLine("Newly Created Address: " + "ID: " + displayAddress.Id);
+                Console.WriteLine("City: " + displayAddress.City);
+                Console.WriteLine("Street Address: " + displayAddress.StreetAddress);
+                Console.WriteLine("ZipCode: " + displayAddress.ZipCode);
+                Console.WriteLine("State: " + displayAddress.State);
+
+                Console.ReadKey();
+
+            }
         }
 
     }

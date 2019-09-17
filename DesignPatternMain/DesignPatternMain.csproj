@@ -86,6 +86,10 @@
       <Project>{fca7502c-2260-4767-977c-95001d151674}</Project>
       <Name>Strategy</Name>
     </ProjectReference>
+    <ProjectReference Include="..\UnitOfWork\UnitOfWork.csproj">
+      <Project>{9E5DD2B0-A631-469D-AA1D-B94E10F73F2E}</Project>
+      <Name>UnitOfWork</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
