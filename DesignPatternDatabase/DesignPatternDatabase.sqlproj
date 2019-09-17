@@ -59,10 +59,14 @@
     <Folder Include="dbo" />
     <Folder Include="dbo\tables" />
     <Folder Include="PublishLocations" />
+    <Folder Include="dbo\Views" />
+    <Folder Include="dbo\Stored Procedures" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\tables\Customer.sql" />
     <Build Include="dbo\tables\Address.sql" />
+    <Build Include="dbo\Views\FullCustomer.sql" />
+    <Build Include="dbo\Stored Procedures\spCustomer_FilterbyLastName.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="PublishLocations\LocalDesignPatternDatabase.publish.publish.xml" />
