@@ -1,9 +1,11 @@
-﻿using Decorator.Component;
+﻿using DataAccess;
+using Decorator.Component;
 using Decorator.ConcreteComponents;
 using Decorator.ConcreteDecorators;
 using Facade.TemperatureFacade;
 using Factory.SimpleFactory.Autos;
 using Factory.SimpleFactory.Factories;
+using Repository.Repositories;
 using Strategy;
 using Strategy.Model;
 using Strategy.Strategy;
@@ -25,7 +27,8 @@ namespace DesignPatternMain
             //executeFacade();
             //executeStrategy();
             //executeSimpleFactory();
-            executeAbstractFactory();
+            //executeAbstractFactory();
+            executeRepository();
         }
 
         static void executeDecorator()
@@ -111,6 +114,21 @@ namespace DesignPatternMain
             car.TurnOff();
 
             Console.ReadKey();
+        }
+
+        static void executeRepository()
+        {
+
+            using (DesignPatternDBEntities entities = new DesignPatternDBEntities())
+            {
+                CustomerRepository customerRepository = new CustomerRepository(entities);
+                var x = customerRepository.FindById(1);
+
+                Console.WriteLine("Customer First Name: " + x.FirstName);
+                Console.WriteLine("Customer Middle Name: " + x.MiddleName);
+                Console.ReadKey();
+            }
+                
         }
 
     }

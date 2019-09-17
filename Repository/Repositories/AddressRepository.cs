@@ -10,29 +10,37 @@ namespace Repository.Repositories
 {
     public class AddressRepository : IRepository<Address>
     {
+        DesignPatternDBEntities DBEntities;
+        public AddressRepository(DesignPatternDBEntities dBEntities)
+        {
+            DBEntities = dBEntities;
+        }
         public void Add(Address newEntity)
         {
-            throw new NotImplementedException();
+            DBEntities.Addresses.Add(newEntity);
         }
 
         public IQueryable<Address> Find(Expression<Func<Address, bool>> predicate)
         {
-            throw new NotImplementedException();
+            var address = DBEntities.Addresses.Where(predicate);
+            return address;
         }
 
         public IQueryable<Address> FindAll()
         {
-            throw new NotImplementedException();
+            var address = DBEntities.Addresses;
+            return address;
         }
 
         public Address FindById(int id)
         {
-            throw new NotImplementedException();
+            var address = DBEntities.Addresses.Where(x => x.Id == id).SingleOrDefault();
+            return address;
         }
 
         public void Remove(Address entity)
         {
-            throw new NotImplementedException();
+            DBEntities.Addresses.Remove(entity);
         }
     }
 }
