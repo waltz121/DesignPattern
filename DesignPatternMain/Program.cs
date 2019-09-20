@@ -186,9 +186,13 @@ namespace DesignPatternMain
         {
             State.WorkItem workItem = new State.WorkItem(new Active());
             workItem.PrintState();
+            Console.WriteLine(" ");
 
             workItem.setState(new Closed());
+
+            Console.WriteLine(" ");
             workItem.PrintState();
+            Console.WriteLine(" ");
 
             Console.ReadKey();
         }

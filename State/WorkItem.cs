@@ -12,6 +12,7 @@ namespace State
         public WorkItem(BaseState state)
         {
             _state = state;
+            _state.SetWorkItem(this);
         }
 
         public int Id { get; set; }

@@ -8,7 +8,7 @@ namespace State
 {
     public abstract class BaseState
     {
-        WorkItem workItem;
+        protected WorkItem workItem;
         public void SetWorkItem(WorkItem workItem)
         {
             this.workItem = workItem;

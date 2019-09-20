@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DataAccess;
+using State.Repositories;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,9 +10,29 @@ namespace State.States
 {
     public class Active : BaseState
     {
+        IRepository<DataAccess.WorkItem> workitemRepository;
         public override void PrintState()
         {
-            Console.WriteLine("the current State is Active");
+            setCurrentState();
+           
+            Console.WriteLine("Current WorkItem Id: " + workItem.Id);
+            Console.WriteLine("Current Title: " + workItem.Title);
+            Console.WriteLine("Current Description: " + workItem.Description);
+            Console.WriteLine("Current State: " + workItem.State);
+
+        }
+
+        void setCurrentState()
+        {
+            using(DesignPatternDBEntities dBEntities = new DesignPatternDBEntities())
+            {
+                workitemRepository = new WorkItemRepository(dBEntities);
+                var DAworkItem = workitemRepository.FindById(1);
+                workItem.Id = DAworkItem.Id;
+                workItem.State = DAworkItem.State;
+                workItem.Title = DAworkItem.Title;
+                workItem.Description = DAworkItem.Description;
+            }
         }
     }
 }
