@@ -6,6 +6,7 @@ using Facade.TemperatureFacade;
 using Factory.SimpleFactory.Autos;
 using Factory.SimpleFactory.Factories;
 using Repository.Repositories;
+using State.States;
 using Strategy;
 using Strategy.Model;
 using Strategy.Strategy;
@@ -30,7 +31,8 @@ namespace DesignPatternMain
             //executeSimpleFactory();
             //executeAbstractFactory();
             //executeRepository();
-            executeUnitOfWork();
+            //executeUnitOfWork();
+            executeStatePattern();
         }
 
         static void executeDecorator()
@@ -178,6 +180,17 @@ namespace DesignPatternMain
                 Console.ReadKey();
 
             }
+        }
+
+        static void executeStatePattern()
+        {
+            State.WorkItem workItem = new State.WorkItem(new Active());
+            workItem.PrintState();
+
+            workItem.setState(new Closed());
+            workItem.PrintState();
+
+            Console.ReadKey();
         }
 
     }

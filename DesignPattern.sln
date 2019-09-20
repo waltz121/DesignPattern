@@ -25,6 +25,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Persistence", "Persistence"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{DD1D418F-6020-4D03-B319-D8455CE1C332}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "State", "State\State.csproj", "{AC5226B0-0C99-4D43-9E7E-0DB502C7C4D6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -73,6 +75,10 @@ Global
 		{DD1D418F-6020-4D03-B319-D8455CE1C332}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD1D418F-6020-4D03-B319-D8455CE1C332}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DD1D418F-6020-4D03-B319-D8455CE1C332}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC5226B0-0C99-4D43-9E7E-0DB502C7C4D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC5226B0-0C99-4D43-9E7E-0DB502C7C4D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC5226B0-0C99-4D43-9E7E-0DB502C7C4D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC5226B0-0C99-4D43-9E7E-0DB502C7C4D6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

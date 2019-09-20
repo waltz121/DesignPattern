@@ -9,6 +9,7 @@
         <EntityTypeShape EntityType="DesignPatternDBModel.Customer" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
         <EntityTypeShape EntityType="DesignPatternDBModel.FullCustomer" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
         <AssociationConnector Association="DesignPatternDBModel.FK_Address_Customer" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="DesignPatternDBModel.WorkItem" Width="1.5" PointX="3.375" PointY="4.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

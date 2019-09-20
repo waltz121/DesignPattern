@@ -75,6 +75,9 @@
       <DependentUpon>DesignPatternDemoDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WorkItem.cs">
+      <DependentUpon>DesignPatternDemoDB.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EntityDeploy Include="DesignPatternDemoDB.edmx">

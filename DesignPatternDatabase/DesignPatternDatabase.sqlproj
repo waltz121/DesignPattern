@@ -67,6 +67,7 @@
     <Build Include="dbo\tables\Address.sql" />
     <Build Include="dbo\Views\FullCustomer.sql" />
     <Build Include="dbo\Stored Procedures\spCustomer_FilterbyLastName.sql" />
+    <Build Include="dbo\tables\WorkItem.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="PublishLocations\LocalDesignPatternDatabase.publish.publish.xml" />

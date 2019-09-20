@@ -28,5 +28,6 @@ namespace DataAccess
         public virtual DbSet<Address> Addresses { get; set; }
         public virtual DbSet<Customer> Customers { get; set; }
         public virtual DbSet<FullCustomer> FullCustomers { get; set; }
+        public virtual DbSet<WorkItem> WorkItems { get; set; }
     }
 }
